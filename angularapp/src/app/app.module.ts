@@ -9,8 +9,9 @@ import { AdminReviewComponent } from './components/adminside/adminreview/adminre
 import { UserReviewComponent } from './components/userside/userreview/userreview.component';
 import { UserHomePageComponent } from './components/userside/userhomepage/userhomepage.component';
 import { AdmissionFormComponent } from './components/userside/admissionform/admissionform.component';
-import { LoginComponent } from './components/auth/login/login.component';
 import { SignupComponent } from './components/auth/signup/signup.component';
+import { LoginComponent } from './components/auth/login/login.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { SignupComponent } from './components/auth/signup/signup.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
