@@ -1,0 +1,24 @@
+<div class="container mb-3 mt-3" id="searchCourse">
+    <i class="fa fa-search" aria-hidden="true"></i>
+    <input type="text"  placeholder="Type here to search course" [(ngModel)]="searchCourse">
+  </div> <br><br>
+  <div class="course-container">
+    <ng-container *ngFor="let course of courses">
+      <div class="course-item">
+        <div *ngIf="searchCourse === '' || course.name.toLowerCase().includes(searchCourse)">
+          <div class="userCourseGrid1">
+            <div class="courseName">{{ course.name }}</div>
+            <div class="courseDuration">Duration of the Course : {{ course.duration }}</div>
+            <div class="courseTime">Course availabe Timing : {{ course.time }}</div>
+            <div class="courseStudents">Number of Students : {{ course.students }}</div>
+            <div class="courseDescription">{{ course.description }}</div>
+            <div class="button">
+              <button class="btn btn-enrol" >
+                <a routerLink="/admission-form" class="route">Enroll course</a></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+  
