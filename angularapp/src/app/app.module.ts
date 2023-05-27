@@ -11,9 +11,9 @@ import { UserHomePageComponent } from './components/userside/userhomepage/userho
 import { AdmissionFormComponent } from './components/userside/admissionform/admissionform.component';
 import { SignupComponent } from './components/auth/signup/signup.component';
 import { LoginComponent } from './components/auth/login/login.component';
-import { ReactiveFormsModule } from '@angular/forms';
 import { EnrolledCourseComponent } from './components/userside/userhomepage/enrolled-course/enrolled-course.component';
-
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
+import { UsercourseComponent } from './components/userside/usercourse/usercourse.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,12 +25,14 @@ import { EnrolledCourseComponent } from './components/userside/userhomepage/enro
     AdmissionFormComponent,
     LoginComponent,
     SignupComponent,
-    EnrolledCourseComponent
+    EnrolledCourseComponent,
+    UsercourseComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
