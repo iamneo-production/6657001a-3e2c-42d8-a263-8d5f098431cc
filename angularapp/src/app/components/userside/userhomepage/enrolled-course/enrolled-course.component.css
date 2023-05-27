@@ -1,0 +1,30 @@
+.course{
+    border: 2.5px solid red;
+    padding:20px;
+    padding-bottom:30px;
+    width:350px;
+    /* background-color: rgb(255, 255, 255); */
+    background-color:rgb(151, 238, 255);
+}
+.container{
+    height:720px;
+    width:100%;  
+    /* background-color:rgb(25, 0, 255);   */
+}
+.col{
+    display:grid;
+    grid-template-columns:auto auto auto ;
+    width: 100%;
+    grid-gap:10%;
+    justify-content:center;
+    align-self: center;    
+}
+.btn{
+    float:right;
+    background-color:red;
+    color: white;
+}
+.i{
+    width: 60%;
+    height: 100px;
+}
