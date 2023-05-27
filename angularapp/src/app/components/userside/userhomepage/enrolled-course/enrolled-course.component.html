@@ -1,0 +1,12 @@
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div class="course" *ngFor="let course of enrolledCourseData;let i=index">
+                <p>Course name:{{course.courseName}}</p>
+                <p>Joined date:{{course.joinedDate}}</p>
+                <p>Course end date:{{course.courseEndDate}}</p>
+                <button class="btn"type="button">My Learning</button>
+            </div>
+        </div>
+    </div>
+</div>
