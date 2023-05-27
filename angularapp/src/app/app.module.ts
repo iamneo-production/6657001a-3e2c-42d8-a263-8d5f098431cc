@@ -12,6 +12,7 @@ import { AdmissionFormComponent } from './components/userside/admissionform/admi
 import { SignupComponent } from './components/auth/signup/signup.component';
 import { LoginComponent } from './components/auth/login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { EnrolledCourseComponent } from './components/userside/userhomepage/enrolled-course/enrolled-course.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     UserHomePageComponent,
     AdmissionFormComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    EnrolledCourseComponent
   ],
   imports: [
     BrowserModule,
