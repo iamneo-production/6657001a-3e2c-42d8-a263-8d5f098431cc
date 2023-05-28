@@ -14,6 +14,8 @@ import { LoginComponent } from './components/auth/login/login.component';
 import { EnrolledCourseComponent } from './components/userside/userhomepage/enrolled-course/enrolled-course.component';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { UsercourseComponent } from './components/userside/usercourse/usercourse.component';
+import { SearchPipe } from './pipe/search.pipe';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,6 +29,7 @@ import { UsercourseComponent } from './components/userside/usercourse/usercourse
     SignupComponent,
     EnrolledCourseComponent,
     UsercourseComponent,
+    SearchPipe
   ],
   imports: [
     BrowserModule,
