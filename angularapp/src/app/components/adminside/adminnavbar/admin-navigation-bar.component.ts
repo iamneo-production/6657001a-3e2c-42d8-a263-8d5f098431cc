@@ -28,8 +28,8 @@ export class AdminNavigationBar implements AfterViewInit {
   }
 
   navSlide() {
-    const burger = document.querySelector('.burger') as HTMLElement;
-    const nav = document.querySelector('.nav-links') as HTMLElement;
+    const burger = document.querySelector('.burger');
+    const nav = document.querySelector('.nav-links');
     const navLinks = document.querySelectorAll('.nav-links li');
 
     burger.addEventListener('click', () => {
