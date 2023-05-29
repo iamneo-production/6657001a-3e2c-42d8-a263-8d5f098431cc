@@ -1,1 +1,73 @@
-<p>signup works!</p>
+<body >
+    <form (ngSubmit)="formSubmit()" class="form_container" >
+        <div class="container">
+          <h1>Register</h1>
+        
+          <label for="role"><b>Select Role</b></label>
+
+          <select [(ngModel)]="user.admin_user" name="role" id="admin/user">
+            <option  value="" selected disabled>Enter Admin/User</option>
+            <option  value="admin">Admin</option>
+            <option  value="user">User</option>
+          </select>
+          
+         
+          <label for="email"><b>Email</b></label>
+          <input
+            [(ngModel)]="user.email"
+            type="email"
+            placeholder="Enter Email"
+            name="email"
+            id="email"
+            required
+          />
+          <label for="username"><b>Username</b></label>
+          <input
+            type="text"
+            [(ngModel)]="user.username"
+            placeholder="Enter username"
+            name="username"
+            id="username"
+            required
+          />
+          <label for="mobileNumber"><b>Mobile Number</b></label>
+          <input
+            type="tel"
+            [(ngModel)]="user.mobileNumber"
+            placeholder="Enter Mobile Number"
+            name="mobileNumber"
+            id="mobileNumber"
+            required
+          />
+
+  
+          <label for="pwd"><b>Password</b></label>
+          <input
+            type="password"
+            [(ngModel)]="user.password"
+            placeholder="Enter Password"
+            name="pwd"
+            id="password"
+            required
+          />
+  
+          <label for="confirmPassword"><b>Confirm Password</b></label>
+          <input
+            type="password"
+            [(ngModel)]="user.confirmPassword"
+            placeholder="Confirm Password"
+            name="confirmPassword"
+            id="confirmPassword"
+            required
+          />
+  
+          <button type="submit">Register</button>
+        </div>
+  
+        <div>
+          <p>Already have an account? <a routerLink="/login">Log in</a>.</p>
+        </div>
+      </form>
+  
+    
+</body>
