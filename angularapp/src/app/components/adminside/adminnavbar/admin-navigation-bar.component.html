@@ -1,0 +1,20 @@
+<nav id="navbar">
+  <div class="logo">
+    <h4>IAS Academy</h4>
+  </div>
+  <ul class="nav-links">
+    <li class="centered" *ngFor="let link of links">
+      <a routerLink="{{ link.route }}" id="user{{ link.id }}" class="links">{{
+        link.name
+      }}</a>
+    </li>
+    <li class="rightmost">
+      <a href="#" id="logout" (click)="logout()">Logout</a>
+    </li>
+  </ul>
+  <div class="burger">
+    <div class="line1"></div>
+    <div class="line2"></div>
+    <div class="line3"></div>
+  </div>
+</nav>
