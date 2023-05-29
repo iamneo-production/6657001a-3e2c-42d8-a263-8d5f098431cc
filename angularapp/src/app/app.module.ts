@@ -16,6 +16,8 @@ import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { UsercourseComponent } from './components/userside/usercourse/usercourse.component';
 import { SearchPipe } from './pipe/search.pipe';
 import { StudentComponent } from './components/adminside/student/student.component';
+import { UserNavigationBar } from './components/userside/usernavbar/user-navigation-bar.component';
+import { AdminNavigationBar } from './components/adminside/adminnavbar/admin-navigation-bar.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,9 @@ import { StudentComponent } from './components/adminside/student/student.compone
     EnrolledCourseComponent,
     UsercourseComponent,
     SearchPipe,
-    StudentComponent
+    StudentComponent,
+    UserNavigationBar, 
+    AdminNavigationBar
   ],
   imports: [
     BrowserModule,
