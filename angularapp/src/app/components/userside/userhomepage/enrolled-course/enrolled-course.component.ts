@@ -9,7 +9,6 @@ import { EnrolledCourseService } from 'src/app/services/enrolled-course.service'
 export class EnrolledCourseComponent implements OnInit {
 
   enrolledCourseData:{courseName:string,joinedDate:string,courseEndDate:string}[]=[];
-  dataIsEmpty=false;
   constructor(private enrolledcourse:EnrolledCourseService){
   }
   ngOnInit(){
