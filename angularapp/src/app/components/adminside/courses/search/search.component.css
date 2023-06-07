@@ -1,0 +1,109 @@
+#searchCourse{
+    width:500px;
+    height: 10px;
+    background-color: #dddddd;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    margin: auto;
+  }
+  #searchCourse > i{
+    font-size: 20px;
+    color: rgb(29, 60, 128);
+  
+  }
+  #searchCourse > input{
+    
+    height: 40px;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    background-color: #dddddd;
+    color: rgb(0, 0, 0);
+    padding-left: 50px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }
+  div {
+    margin-bottom: 10px;
+  }
+  .course-item {
+    width: 800px;
+    margin: auto;
+    transition: transform 0.3s ease;
+    box-shadow: 10px 5px 6px rgba(196, 167, 167, 0.288);
+  }
+  
+  .course-item:hover {
+    transform: scale(1.03);
+  }
+  
+  .cr {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    height: 350px;
+    align-items: center;
+    background-color: #dddddd;
+  }
+  
+  .courseName {
+    font-weight: bold;
+    font-size: larger;
+    color: #265191;
+  }
+  
+  .courseDuration,
+  .courseTime,
+  .courseStudents {
+    margin-top: 5px;
+    color: #413f3f;
+  }
+  
+  .courseDescription {
+    margin-top: 10px;
+  }
+  
+  .button {
+    margin-top: 10px;
+  }
+  
+  .btn {
+    background-color: #265191;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-enrol {
+    background-color: #265191;
+  }
+  
+  .btn-enrol:hover {
+    background-color: #45a049;
+  }
+  
+  .editm{
+    position: relative;
+    left: 520px;
+    top: 5px;
+  }
+
+  .addm{
+    position: relative;
+    left: 85%;
+
+  }
+
+  .delm{
+    position: relative;
+    left: 540px;
+    top: 5px;
+  }
