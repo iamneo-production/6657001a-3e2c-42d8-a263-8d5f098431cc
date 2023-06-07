@@ -18,6 +18,9 @@ import { SearchPipe } from './pipe/search.pipe';
 import { StudentComponent } from './components/adminside/student/student.component';
 import { UserNavigationBar } from './components/userside/usernavbar/user-navigation-bar.component';
 import { AdminNavigationBar } from './components/adminside/adminnavbar/admin-navigation-bar.component';
+import { AddComponent } from './components/adminside/courses/add/add.component';
+import { EditComponent } from './components/adminside/courses/edit/edit.component';
+import { SearchComponent } from './components/adminside/courses/search/search.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +38,7 @@ import { AdminNavigationBar } from './components/adminside/adminnavbar/admin-nav
     SearchPipe,
     StudentComponent,
     UserNavigationBar, 
-    AdminNavigationBar
+    AdminNavigationBar, AddComponent, EditComponent, SearchComponent
   ],
   imports: [
     BrowserModule,
