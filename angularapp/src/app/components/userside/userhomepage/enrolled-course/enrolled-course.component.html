@@ -1,0 +1,13 @@
+<user-navigation-bar></user-navigation-bar>
+<div class="container">
+    <div class="row">
+        <div class="card col">
+            <div class="card-body course" *ngFor="let course of enrolledCourseData;let i=index">
+                <p>Course name:{{course.courseName}}</p>
+                <p>Joined date:{{course.joinedDate}}</p>
+                <p>Course end date:{{course.courseEndDate}}</p>
+                <button class="btn"type="button">My Learning</button>
+            </div>
+        </div>
+    </div>
+</div>
