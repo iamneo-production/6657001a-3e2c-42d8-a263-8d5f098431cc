@@ -18,6 +18,7 @@ import { SearchPipe } from './pipe/search.pipe';
 import { StudentComponent } from './components/adminside/student/student.component';
 import { UserNavigationBar } from './components/userside/usernavbar/user-navigation-bar.component';
 import { AdminNavigationBar } from './components/adminside/adminnavbar/admin-navigation-bar.component';
+import {HttpClientModule} from  '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -35,13 +36,14 @@ import { AdminNavigationBar } from './components/adminside/adminnavbar/admin-nav
     SearchPipe,
     StudentComponent,
     UserNavigationBar, 
-    AdminNavigationBar
+    AdminNavigationBar,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
