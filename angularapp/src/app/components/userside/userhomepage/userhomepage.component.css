@@ -1,0 +1,51 @@
+ul{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap:wrap;
+    list-style-type:none;
+    padding :0;
+  }
+  ul li a.acd{
+    height:20rem;
+    width:2 0rem;
+    border:1px solid orange;
+    margin:0.5rem;
+    display: flex;
+    flex-direction:column  ;
+    overflow:hidden;
+    color:orange;
+    border-radius:20px;
+  }
+  .search-container {
+    display: flex;
+    align-items:center;
+    justify-content: center;
+  }
+  
+  input[type="text"] {
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 4px 0 0 4px;
+  }
+  
+  button[type="submit"] {
+    padding: 8px 16px;
+    background-color:orange;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #45a049;
+  }
+  .coursename{
+    text-align:center;
+    color: #45a049;
+  }
+  .courseaddress{
+    color:#45a049;
+  }
