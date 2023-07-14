@@ -1,0 +1,54 @@
+.design1{
+    margin: 10% 0px ;
+    width: 70%;
+    margin-left: 50px;
+    text-align: center;
+    padding: 30px 30px;
+    font-size: 25px;
+}
+
+.design2{
+    margin-top: 10%;
+    width: 70%;
+    margin-left: 50px;
+    text-align: center;
+    padding: 30px 30px;
+    font-size: 25px;
+
+}
+
+.design3{
+    margin-top: 20%;
+    width: 70%;
+    margin-left: 50px;
+    text-align: center;
+    padding: 30px 30px;
+    font-size: 25px;
+}
+
+.design4{
+    
+    margin: 10% 0px ;
+    width: 60%;
+    margin-left: 50px;
+    text-align: center;
+    padding: 30px 30px;
+    font-size: 18px;
+}
+
+.design5{
+    margin: 26% 0px ;
+    width: 50%;
+    margin-left: 50px;
+    text-align: center;
+    padding: 30px 30px;
+    font-size: 20px;
+    
+}
+
+.button1{
+    position: relative;
+    left: 50%;
+    bottom: 23%;
+    
+}

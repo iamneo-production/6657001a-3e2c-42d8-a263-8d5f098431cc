@@ -19,6 +19,9 @@ import { StudentComponent } from './components/adminside/student/student.compone
 import { UserNavigationBar } from './components/userside/usernavbar/user-navigation-bar.component';
 import { AdminNavigationBar } from './components/adminside/adminnavbar/admin-navigation-bar.component';
 import {HttpClientModule} from  '@angular/common/http';
+import { AddComponent } from './components/adminside/courses/add/add.component';
+import { EditComponent } from './components/adminside/courses/edit/edit.component';
+import { SearchComponent } from './components/adminside/courses/search/search.component';
 
 @NgModule({
   declarations: [
@@ -36,11 +39,12 @@ import {HttpClientModule} from  '@angular/common/http';
     SearchPipe,
     StudentComponent,
     UserNavigationBar, 
-    AdminNavigationBar,
+    AdminNavigationBar,, AddComponent, EditComponent, SearchComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
+    AppRoutingModule,AddComponent, EditComponent, SearchComponent,
+    AdminNavigationBar,
     ReactiveFormsModule,
     FormsModule,
     HttpClientModule,

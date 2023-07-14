@@ -1,0 +1,48 @@
+<form action="">
+    <div class="container-fluid">
+      <div class="row">
+    
+        <div class="col-6">
+            
+          
+        
+          <input type="text" id="courseName" class="form-control design1" ngModel #cn="ngModel" name="CName" placeholder="Enter the course Name" >
+        
+             
+        
+        
+          <input type="text" id="courseDuration" class="form-control design2" ngModel #cd="ngModel" name="CDuration" aria-describedby="passwordHelpBlock" placeholder="Enter the course Duration" >
+        
+        
+        
+        
+          
+        
+          <input type="text" id="courseTiming" class="form-control design3" ngModel
+          #ct="ngModel" aria-describedby="passwordHelpBlock" name="CTiming" placeholder="Enter the course Timing" > 
+        
+        
+        </div>
+        <div class="col-6">
+         
+         
+          <input type="text" id="courseEnrolled" ngModel
+          #ce="ngModel" class="form-control design4" aria-describedby="passwordHelpBlock" name="CEnrolled" placeholder="Enter no of enrolled for the course" >
+         
+         
+        
+          <textarea name="courseenrolled" ngModel
+          #cdd="ngModel"  class="form-control design5" id="courseEnrolled" cols="60" rows="5" name="CDescription" placeholder="Enter the course Description"></textarea>
+          
+      <button class="btn btn-success button1" (click)="show(cn,cd,ct,ce,cdd)" >Addcourse</button>
+    
+    </div>
+    </div>
+    </div>
+    
+      
+      
+        
+       
+    
+    </form>
