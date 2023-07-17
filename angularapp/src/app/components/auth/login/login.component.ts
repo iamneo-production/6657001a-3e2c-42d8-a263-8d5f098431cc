@@ -37,20 +37,24 @@ export class LoginComponent implements OnInit {
     this.login.email = this.loginForm.value.email;
     this.login.password = this.loginForm.value.password;
 
-    this.authService.isUserPresent(this.login).subscribe(res => {
-      if (res === true) {
-        this.router.navigate(['user', 'institutes']);
-      } else {
-        this.authService.isAdminPresent(this.login).subscribe(res => {
-          if (res === true) {
-            this.router.navigate(['admin', 'institutes']);
-          }
-        })
-      }
+    this.authService.isUserPresent(this.login).subscribe((response: any) => {
+      const { role, jwttoken } = response;
+      localStorage.setItem("token", jwttoken);
+      localStorage.setItem("role", role);
 
-    })
+      if (role === "userDetailsadmin") {
+        this.router.navigate(['/adminAcademy']);
+      } else {
+        this.router.navigate(['/viewAcademy']);
+      }
+    }, (error: any) => {
+      console.log(error)
+    }
+
+    );
 
   }
+
 
 
 
