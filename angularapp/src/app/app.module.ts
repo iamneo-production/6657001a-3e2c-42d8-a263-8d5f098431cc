@@ -18,6 +18,7 @@ import { SearchPipe } from './pipe/search.pipe';
 import { StudentComponent } from './components/adminside/student/student.component';
 import { UserNavigationBar } from './components/userside/usernavbar/user-navigation-bar.component';
 import { AdminNavigationBar } from './components/adminside/adminnavbar/admin-navigation-bar.component';
+import {HttpClientModule} from  '@angular/common/http';
 import { AddComponent } from './components/adminside/courses/add/add.component';
 import { EditComponent } from './components/adminside/courses/edit/edit.component';
 import { SearchComponent } from './components/adminside/courses/search/search.component';
@@ -38,13 +39,15 @@ import { SearchComponent } from './components/adminside/courses/search/search.co
     SearchPipe,
     StudentComponent,
     UserNavigationBar, 
-    AdminNavigationBar, AddComponent, EditComponent, SearchComponent
+    AdminNavigationBar,, AddComponent, EditComponent, SearchComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
+    AppRoutingModule,AddComponent, EditComponent, SearchComponent,
+    AdminNavigationBar,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
