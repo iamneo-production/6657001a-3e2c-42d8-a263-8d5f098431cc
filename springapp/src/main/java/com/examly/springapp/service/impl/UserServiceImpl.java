@@ -33,6 +33,11 @@ public class UserServiceImpl implements UserService {
 
     }
 
+    @Override
+    public UserEntity fetchUser(String email){
+        return userRepository.findByEmail(email).get();
+    }
+
     
 }
 

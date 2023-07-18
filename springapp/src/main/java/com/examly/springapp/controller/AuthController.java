@@ -50,8 +50,9 @@ public class AuthController {
         }
         final UserDetails userdetails = userDetailsService.loadUserByUsername(loginModel.getEmail());
         final String token = jwtUtil.generateToken(userdetails);
+        final UserEntity user = userService.fetchUser(loginModel.getEmail());
 
-        return ResponseEntity.ok(new AuthResponse(token));
+        return ResponseEntity.ok(new AuthResponse(user, token));
     }
 
     @GetMapping("/user/hello")
