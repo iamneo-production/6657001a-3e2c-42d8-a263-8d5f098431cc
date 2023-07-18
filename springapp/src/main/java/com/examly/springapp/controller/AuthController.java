@@ -18,6 +18,7 @@ import com.examly.springapp.model.AuthResponse;
 import com.examly.springapp.model.LoginModel;
 import com.examly.springapp.model.UserModel;
 import com.examly.springapp.service.UserService;
+import com.examly.springapp.entity.UserEntity;
 
 @RestController
 public class AuthController {
@@ -52,7 +53,7 @@ public class AuthController {
         final String token = jwtUtil.generateToken(userdetails);
         final UserEntity user = userService.fetchUser(loginModel.getEmail());
 
-        return ResponseEntity.ok(new AuthResponse(user, token));
+        return ResponseEntity.ok(new AuthResponse(user.getUserRole(), token));
     }
 
     @GetMapping("/user/hello")
