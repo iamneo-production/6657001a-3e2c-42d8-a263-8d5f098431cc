@@ -30,7 +30,22 @@ public class UserServiceImpl implements UserService {
             return "User already exist";
         }
         return "User saved succcessfully";
-
+    }
+    @Override
+    public String saveAdmin(UserModel user) {
+      
+        UserEntity tempadmin = new UserEntity();
+        tempadmin.setEmail(user.getEmail());
+        tempadmin.setPassword(passwordEncoder.encode(user.getPassword()));
+        tempadmin.setMobileNumber(user.getMobileNumber());
+        tempadmin.setUserRole(user.getUserRole().toUpperCase());
+        tempadmin.setUsername(user.getUsername());
+        try{
+        userRepository.save(tempadmin);}
+        catch(Exception e){
+            return "Admin already exist";
+        }
+        return "Admin saved succcessfully";
     }
 
     @Override
