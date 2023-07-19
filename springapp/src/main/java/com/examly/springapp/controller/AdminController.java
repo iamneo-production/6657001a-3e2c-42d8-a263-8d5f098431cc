@@ -16,7 +16,7 @@ import com.examly.springapp.model.StudentModel;
 import com.examly.springapp.service.StudentService;
 
 @RestController
-@CrossOrigin(origins = "https://8081-fddecffdbcffbbedebaebcdacaee.project.examly.io")
+@CrossOrigin(origins = "https://8081-accfbadcaadccabfcbbdadbdfbbefea.project.examly.io")
 public class AdminController {
 
     @Autowired
