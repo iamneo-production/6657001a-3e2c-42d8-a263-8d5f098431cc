@@ -15,6 +15,7 @@
     <label for="email"><b>Email</b></label>
     <input
       type="email"
+      id="email"
       [(ngModel)]="user.email"
       formControlName="email"
       placeholder="Enter Email"
@@ -26,6 +27,7 @@
     <label for="username"><b>Username</b></label>
     <input
       type="text"
+      id="username"
       [(ngModel)]="user.username"
       formControlName="username"
       placeholder="Enter username"
@@ -36,6 +38,7 @@
     <label for="mobileNumber"><b>Mobile Number</b></label>
     <input
       type="tel"
+      id="mobileNumber
       [(ngModel)]="user.mobileNumber"
       formControlName="mobileNumber"
       placeholder="Enter Mobile Number"
@@ -47,6 +50,7 @@
     <label for="pwd"><b>Password</b></label>
     <input
       type="password"
+      id="password
       [(ngModel)]="user.password"
       formControlName="password"
       placeholder="Enter Password"
@@ -58,6 +62,7 @@
     <label for="confirmPassword"><b>Confirm Password</b></label>
     <input
       type="password"
+      id="confirmPassword"
       [(ngModel)]="user.confirmPassword"
       formControlName="confirmPassword"
       placeholder="Confirm Password"
@@ -67,7 +72,7 @@
     <span *ngIf="userForm.get('confirmPassword')?.value !== userForm.get('password')?.value && userForm.get('confirmPassword')?.touched"  style="color: red;">Passwords mismatch. Both passwords must be the same.</span>
    
 
-    <button type="submit" [disabled]="userForm.invalid">Register</button>
+    <button type="submit" id="submitButton" [disabled]="userForm.invalid">Register</button>
   </div>
 
   <div>
