@@ -1,1 +1,41 @@
-<p>institutes works!</p>
+<div class="container mt-3">
+  <div class="row justify-content-center">
+    <div class="col-6">
+      <div class="input-group mb-5">
+        <input
+          type="search"
+          class="form-control rounded"
+          placeholder="Search"
+          aria-label="Search"
+          aria-describedby="search-addon"
+          [(ngModel)]="searchText"
+        />
+        <button type="button" class="btn btn-outline-primary">search</button>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-3 col-md-6 col-sm-12 mb-4" *ngFor="let institute of filterInstitutes(); let i = index;">
+      <div class="card h-100 card-custom" [id]="'institutegrid' + (i + 1)">
+        <img [src]="institute.instituteImgUrl" alt="Institute Image" class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-title text-center">{{ institute.instituteName }}</h5>
+          <p class="card-text">{{ institute.instituteAddress }}</p>
+          <div class="rating">
+            <span class="star" *ngFor="let star of getStars(institute.instituteRating)"><i class="fas fa-star"></i></span>
+          </div>
+        </div>
+        <div class="card-icons">
+          <i class="fas fa-edit edit-icon" (click)="editInstitute(institute.instituteId)"></i>
+          <i class="fas fa-trash-alt delete-icon" (click)="deleteInstitute(institute.instituteId)"></i>
+        </div>
+      </div>
+      <a class="btn btn-primary btn-add" routerLink="/admin/add-institute">
+        <i class="fas fa-plus"></i>  Add
+      </a>
+    </div>
+  </div>
+  <div *ngIf="filterInstitutes().length === 0" class="text-center mt-4">
+    No institutes found.
+  </div>
+</div>
