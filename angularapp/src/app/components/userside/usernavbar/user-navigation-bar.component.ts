@@ -45,7 +45,9 @@ export class UserNavigationBar implements AfterViewInit {
   }
 
   logout() {
-    // Perform logout actions
+    localStorage.removeItem('token');
+    localStorage.removeItem('role');
+    
     this.router.navigate(['/login']);
   }
 }
