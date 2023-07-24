@@ -14,7 +14,7 @@ import com.examly.springapp.model.StudentModel;
 import com.examly.springapp.service.StudentService;
 
 @RestController
-@CrossOrigin(origins = "https://8081-accfbadcaadccabfcbbdadbdfbbefea.project.examly.io")
+@CrossOrigin(origins = "https://8080-faeaaacbbdbadccabfcbbfdcfccabcfad.project.examly.io")
 public class UserController {
 
     @Autowired
@@ -44,6 +44,51 @@ public class UserController {
     public Void deleteStudent(@PathVariable("studentId") Integer studentId) {
         return studentService.deleteStudent(studentId);
     }
+
+    @Autowired
+	 public AdmissionService admissionService;
+     //add admissin
+	 @PostMapping("/user/addAdmission")
+	 public AdmissionModel addAdmission(@RequestBody AdmissionModel admissionmodel)
+	 {
+		 return admissionService.saveDetail(admissionmodel);
+	 }
+
+	 //view admission
+	 @GetMapping("/user/viewAdmission")
+	 public List<AdmissionModel> viewAllDetails()
+	 {
+		 return admissionService.getDetails();
+	 }
+
+     //edit admission
+     @PutMapping("/user/editAdmission/{id}")
+     public AdmissionModel editAddmission(@PathVariable int id,@RequestBody AdmissionModel admissionmodel)
+	 {
+    	 return admissionService.updateDetails( id,admissionmodel);
+	 }
+
+     //delete admision
+	 @DeleteMapping("/user/deleteAdmission/{id}")
+	 public String deleteAdmision(@PathVariable int id)
+	 {
+		 return admissionService.deleteDetails(id);
+	 }
+
+	 //Admission status
+	 @GetMapping("/user/viewStatus/{id}")
+	 public String findStatus(@PathVariable int id)
+	 {
+		 return admissionService.getStatusValue(id);
+	 }
+
+	 //view admission by Id
+	 @GetMapping("/user/viewAdmission/{id}")
+	 public AdmissionModel viewAdmissionById(@PathVariable int id)
+	 {
+		 return admissionService.getDetailsById(id);
+	 }
+
 
 
     
