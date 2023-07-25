@@ -1,53 +1,62 @@
 form{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .container{
-    display: flex;
-    flex-direction: column;
-    width: 25vw;
+  display: flex;
+  flex-direction: column;
+  width: 25vw;
 }
 h1{
-    text-align: center;
+  text-align: center;
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: whitesmoke;
-    height: 100vh;
-    width: 100vw;
-  }
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: whitesmoke;
+  height: 100vh;
+  width: 100vw;
+}
 input ,select{
-    margin: 0.25em 0em 1em 0em;
-    outline: none;
-    padding: 0.5em;
-    border: none;
-    background-color: rgb(225, 225, 225);
-    border-radius: 0.25em;
-    color: black;
-  }
+  margin: 0.25em 0em 1em 0em;
+  outline: none;
+  padding: 0.5em;
+  border: none;
+  background-color: rgb(225, 225, 225);
+  border-radius: 0.25em;
+  color: black;
+}
 button {
-    padding: 0.75em;
-    border: none;
-    outline: none;
-    background-color: rgb(68, 18, 232);
-    color: white;
-    border-radius: 0.25em;
-  }
-  
-  button:hover {
-    cursor: pointer;
-    background-color: rgb(41, 4, 164);
-  }
-  a{
-    text-decoration: none;
-  }
+  padding: 0.75em;
+  border: none;
+  outline: none;
+  background-color: rgb(68, 18, 232);
+  color: white;
+  border-radius: 0.25em;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: rgb(41, 4, 164);
+}
+a{
+  text-decoration: none;
+}
 .form_container{
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh; 
+    
+}
+:disabled{
   
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh; 
-      
+  background-color: gray;
+}
+:disabled:hover{
+  cursor:not-allowed;
+  background-color: gray;
+
 }
