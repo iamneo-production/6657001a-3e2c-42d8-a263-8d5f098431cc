@@ -8,12 +8,12 @@ import { InstituteForm } from './add-institute';
 })
 export class AddInstituteComponent implements OnInit {
   form : InstituteForm={
-    text:'',
-      tel:'',
-      url:'',
-      email:'',
-      location:'',
-      textarea:'',
+    instituteName:'',
+    mobile:'',
+    instituteImgUrl:'',
+    email:'',
+    instituteAddress:'',
+    instituteDescription :'',
   }
   constructor() { }
 

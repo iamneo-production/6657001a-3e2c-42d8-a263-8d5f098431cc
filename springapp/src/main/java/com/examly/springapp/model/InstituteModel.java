@@ -15,23 +15,30 @@ public class InstituteModel {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "institute_id")
     private Integer instituteId;
-
+    @Column(name = "institute_name")
     private String instituteName;
+    @Column(name = "institute_description")
     private String instituteDescription;
+    @Column(name = "institute_address")
     private String instituteAddress;
+    @Column(name = "institute_mobile")
     private String mobile;
+    @Column(name = "institute_email")
     private String email;
+    @Column(name = "institute_imgUrl")
+	private String instituteImgUrl;
 
     public InstituteModel() {
     }
 
-    public InstituteModel(Integer instituteId, String instituteName, String instituteDescription, String instituteAddress, String mobile, String email) {
+    public InstituteModel(Integer instituteId, String instituteName, String instituteDescription, String instituteAddress, String mobile, String email, String instituteImgUrl) {
         this.instituteId = instituteId;
         this.instituteName = instituteName;
         this.instituteDescription = instituteDescription;
         this.instituteAddress = instituteAddress;
         this.mobile = mobile;
         this.email = email;
+        this.instituteImgUrl= instituteImgUrl;
     }
 
     public Integer getInstituteId() {
@@ -82,4 +89,20 @@ public class InstituteModel {
         this.email = email;
     }
 
+    public String getInstituteImgUrl() {
+		return instituteImgUrl;
+	}
+
+	public void setInstituteImgUrl(String instituteImgUrl) {
+		this.instituteImgUrl = instituteImgUrl;
+	}
+
+    @Override
+    public String toString() {
+        return "InstituteModel [email=" + email + ", instituteAddress=" + instituteAddress + ", instituteDescription="
+                + instituteDescription + ", instituteId=" + instituteId + ", instituteImgUrl=" + instituteImgUrl
+                + ", instituteName=" + instituteName + ", mobile=" + mobile + "]";
+    }
+
+    
 }

@@ -1,8 +1,8 @@
 export interface EditForm{
-    text:string;
-    tel:string;
-    url:string;
+    instituteName:string;
+    mobile:string;
+    instituteImgUrl:string;
     email:string;
-    location:string;
-    textarea:string;
-}
+    instituteAddress:string;
+    instituteDescription :string;
+} 
