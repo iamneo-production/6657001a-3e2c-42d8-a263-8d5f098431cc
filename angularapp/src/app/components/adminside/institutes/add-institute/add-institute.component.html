@@ -2,36 +2,36 @@
     <form (ngSubmit)="submit()" #myForm="ngForm" class="p-2 rounded-lg m-auto w-1/3 border-4" style="width: 600px;">
       <h1 class="first"><b>ADD ACADEMY</b></h1>
       <div class="my-5 w-full">
-          <label for="text">Academy Name</label>
-          <input type="text"  id="text" class="placeholder-gray-500 p-2 rounded w-full border bg-gray-200 font-sans"
-           placeholder="Enter Academy name" [(ngModel)]="form.text" name="text" #text="ngModel" required minlength="4" appForbiddenName="bob">
+          <label for="academyName">Academy Name</label>
+          <input type="text"  id="academyName" class="placeholder-gray-500 p-2 rounded w-full border bg-gray-200 font-sans"
+           placeholder="Enter Academy name" [(ngModel)]="form.instituteName" name="instituteName" #instituteName="ngModel" required minlength="4" appForbiddenName="bob">
          </div>
-         <div *ngIf="text.invalid &&(text.dirty||text.touched)"   [hidden]="text.valid" class ="p-4 bg-red-300 text-red-800 rounded">
+         <div *ngIf="instituteName.invalid &&(instituteName.dirty||instituteName.touched)"   [hidden]="instituteName.valid" class ="p-4 bg-red-300 text-red-800 rounded">
           Name field must be valid
         
-          <div *ngIf="text.errors?.['required']">
+          <div *ngIf="instituteName.errors?.['required']">
             Name is required.
           </div>
-          <div *ngIf="text.errors?.['minlength']">
+          <div *ngIf="instituteName.errors?.['minlength']">
             Name must be at least 4 characters long.
           </div>
-          <div *ngIf="text.errors?.['forbiddenName']">
+          <div *ngIf="instituteName.errors?.['forbiddenName']">
             Name cannot be Bob.
           </div>
           
       </div>
          
        <div class=" my-5 w-full">
-           <label for="tel">Contact Number</label>
-           <input type="tel" id="tel" class="placeholder-gray-500 p-2 rounded w-full border bg-gray-200 font-sans"
-           placeholder="Enter the contact number" required minlength="10"  [(ngModel)]="form.tel" name="tel" #tel="ngModel" required>
+           <label for="contactNumber">Contact Number</label>
+           <input type="tel" id="contactNumber" class="placeholder-gray-500 p-2 rounded w-full border bg-gray-200 font-sans"
+           placeholder="Enter the contact number" required minlength="10"  [(ngModel)]="form.mobile" name="mobile" #mobile="ngModel" required>
       </div>
-      <div *ngIf="tel.invalid && (tel.dirty||tel.touched)" [hidden]="tel.valid" class ="p-4 bg-red-300 text-red-800 rounded">
+      <div *ngIf="mobile.invalid && (mobile.dirty||mobile.touched)" [hidden]="mobile.valid" class ="p-4 bg-red-300 text-red-800 rounded">
         contact number field must be valid
-        <div *ngIf="tel.errors?.['required']">
+        <div *ngIf="mobile.errors?.['required']">
           Phone number is required.
         </div>
-        <div *ngIf="tel.errors?.['minlength']">
+        <div *ngIf="mobile.errors?.['minlength']">
           number is invalid.
         </div>
     
@@ -39,18 +39,18 @@
     </div>
       
       <div class=" my-5 w-full">
-          <label for="url">Image url</label>
-          <input type="url" id="url" class="placeholder-gray-500 p-2 rounded w-full border bg-gray-200 font-sans"
-           placeholder="Enter the academy Image url" [(ngModel)]="form.url" name="url" #url="ngModel" required>
+          <label for="imageUrl">Image url</label>
+          <input type="url" id="imageUrl" class="placeholder-gray-500 p-2 rounded w-full border bg-gray-200 font-sans"
+           placeholder="Enter the academy Image url" [(ngModel)]="form.instituteImgUrl" name="instituteImgUrl" #instituteImgUrl="ngModel" required>
          </div>
 
-         <div *ngIf="url.invalid && (url.dirty||url.touched)" [hidden]="url.valid" class ="p-4 bg-red-300 text-red-800  rounded">
+         <div *ngIf="instituteImgUrl.invalid && (instituteImgUrl.dirty||instituteImgUrl.touched)" [hidden]="instituteImgUrl.valid" class ="p-4 bg-red-300 text-red-800  rounded">
           url field must be valid
       </div>
 
          <div class=" my-5 w-full">
-          <label for="email">Academy Email</label>
-          <input type="email" id="email" class="placeholder-gray-500 p-2 rounded w-full border bg-gray-200 font-sans"
+          <label for="emailId">Academy Email</label>
+          <input type="email" id="emailId" class="placeholder-gray-500 p-2 rounded w-full border bg-gray-200 font-sans"
            placeholder="Enter the academy email" [(ngModel)]="form.email" email="true"name="email" #email="ngModel" required>
          </div>
          
@@ -59,22 +59,22 @@
       </div>
 
          <div class="  my-5 w-full">
-          <label for="location">Academy Location</label>
-          <input type="location" id="location" class="placeholder-gray-500 p-2 rounded w-full border bg-gray-200 font-sans"
-           placeholder="Enter the academy Location" [(ngModel)]="form.location" name="location" #location="ngModel" required>
+          <label for="academyLocation">Academy Location</label>
+          <input type="location" id="academyLocation" class="placeholder-gray-500 p-2 rounded w-full border bg-gray-200 font-sans"
+           placeholder="Enter the academy Location" [(ngModel)]="form.instituteAddress" name="instituteAddress" #instituteAddress="ngModel" required>
          </div>
 
-         <div *ngIf="location.invalid && (location.dirty||location.touched)" [hidden]="location.valid" class ="p-4 bg-red-300 text-red-800 rounded">
+         <div *ngIf="instituteAddress.invalid && (instituteAddress.dirty||instituteAddress.touched)" [hidden]="instituteAddress.valid" class ="p-4 bg-red-300 text-red-800 rounded">
           Location field must be valid
       </div>
 
         <div class="  my-5 w-full">
-          <label for="textarea">Academy Description</label>
-          <textarea id="textarea" class="placeholder-gray-500 p-2 rounded w-full border bg-gray-200 font-sans"
-          placeholder="Enter the academy Description" [(ngModel)]="form.textarea" name="textarea" #textarea="ngModel" required >
+          <label for="">Academy Description</label>
+          <textarea id="acamyDescription" class="placeholder-gray-500 p-2 rounded w-full border bg-gray-200 font-sans"
+          placeholder="Enter the academy Description" [(ngModel)]="form.instituteDescription" name="instituteDescription" #instituteDescription="ngModel" required >
         </textarea>
         </div>
-        <div *ngIf="textarea.invalid && (textarea.dirty||textarea.touched)" [hidden]="textarea.valid" class ="p-4 bg-red-300 text-red-800 rounded">
+        <div *ngIf="instituteDescription.invalid && (instituteDescription.dirty||instituteDescription.touched)" [hidden]="instituteDescription.valid" class ="p-4 bg-red-300 text-red-800 rounded">
           Description field must be valid
       </div>
         <div class="my-5 w-">

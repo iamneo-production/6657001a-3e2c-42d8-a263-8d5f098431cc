@@ -8,12 +8,13 @@ import { EditForm } from './edit-institute'
 })
 export class EditInstituteComponent implements OnInit {
   public form :EditForm={
-    text:'',
-      tel:'',
-      url:'',
-      email:'',
-      location:'',
-      textarea:'',
+    instituteName:'',
+    mobile:'',
+    instituteImgUrl:'',
+    email:'',
+    instituteAddress:'',
+    instituteDescription :'',
+    
   }
   constructor() { }
 
