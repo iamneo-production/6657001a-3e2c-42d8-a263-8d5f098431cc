@@ -43,7 +43,7 @@ public class UserController {
     @DeleteMapping("/user/deleteStudent/{studentId}")
     public Void deleteStudent(@PathVariable("studentId") Integer studentId) {
         return studentService.deleteStudent(studentId);
-    }
+    }c
 
     @Autowired
 	 public AdmissionService admissionService;
