@@ -8,7 +8,7 @@ import { CoursesComponent } from './components/adminside/courses/courses.compone
 import { AdminReviewComponent } from './components/adminside/adminreview/adminreview.component';
 import { UserReviewComponent } from './components/userside/userreview/userreview.component';
 import { UserHomePageComponent } from './components/userside/userhomepage/userhomepage.component';
-import { AdmissionFormComponent } from './components/userside/admissionform/admissionform.component';
+import { AdmissionformComponent } from './components/userside/admissionform/admissionform.component';
 import { SignupComponent } from './components/auth/signup/signup.component';
 import { LoginComponent } from './components/auth/login/login.component';
 import { EnrolledCourseComponent } from './components/userside/userhomepage/enrolled-course/enrolled-course.component';
@@ -22,6 +22,8 @@ import {HttpClientModule} from  '@angular/common/http';
 import { AddComponent } from './components/adminside/courses/add/add.component';
 import { EditComponent } from './components/adminside/courses/edit/edit.component';
 import { SearchComponent } from './components/adminside/courses/search/search.component';
+import { AddstudentComponent } from './components/adminside/student/addstudent/addstudent.component';
+import { EditstudentComponent } from './components/adminside/student/editstudent/editstudent.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,7 @@ import { SearchComponent } from './components/adminside/courses/search/search.co
     AdminReviewComponent,
     UserReviewComponent,
     UserHomePageComponent,
-    AdmissionFormComponent,
+    AdmissionformComponent,
     LoginComponent,
     SignupComponent,
     EnrolledCourseComponent,
@@ -39,7 +41,9 @@ import { SearchComponent } from './components/adminside/courses/search/search.co
     SearchPipe,
     StudentComponent,
     UserNavigationBar, 
-    AdminNavigationBar,, AddComponent, EditComponent, SearchComponent
+    AdminNavigationBar, AddComponent, EditComponent, SearchComponent,
+    AddstudentComponent,
+    EditstudentComponent
   ],
   imports: [
     BrowserModule,
