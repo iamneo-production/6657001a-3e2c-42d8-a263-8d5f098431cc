@@ -40,7 +40,13 @@ public class AuthController {
 
         return ResponseEntity.ok(response);
     }
+    @PostMapping("/admin/signup")
+    public ResponseEntity<?> saveAdmin(@RequestBody UserModel user) {
+        String response = userService.saveAdmin(user);
 
+        return ResponseEntity.ok(response);
+    }
+ 
     @PostMapping("/user/login")
     public ResponseEntity<?> isUserPresent(@RequestBody LoginModel loginModel) throws Exception {
         try {
