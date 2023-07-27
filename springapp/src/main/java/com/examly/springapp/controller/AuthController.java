@@ -21,6 +21,7 @@ import com.examly.springapp.service.UserService;
 import com.examly.springapp.entity.UserEntity;
 
 @RestController
+@CrossOrigin(origins = "https://8080-accfbadcaadccabfcbbfdcfccabcfad.project.examly.io")
 public class AuthController {
     @Autowired
     private UserService userService;

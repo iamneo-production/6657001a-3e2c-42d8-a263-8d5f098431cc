@@ -1,11 +1,12 @@
+import { ToastrService } from 'ngx-toastr';
 import { Component, OnInit } from '@angular/core';
 import {FormControl,FormGroup,Validators} from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { AuthService } from 'src/app/services/authservice/authservice.service';
-import { Students } from 'src/app/components/adminside/student';
-import { ToastrService } from 'ngx-toastr';
-import { UserserviceService } from 'src/app/service/userservice/userservice.service';
-import { Admission } from 'src/app/class/admission';
+import { Admission } from './admission';
+import { Student } from '../../adminside/student/student';
+import { AuthserviceService } from 'src/app/services/authservice.service';
+import { UserserviceService } from 'src/app/services/userservice.service';
+
 
 @Component({
   selector: 'app-admissionform',
@@ -14,13 +15,13 @@ import { Admission } from 'src/app/class/admission';
 })
 export class AdmissionformComponent implements OnInit {
 
-  constructor(private route:ActivatedRoute,private authservice:AuthService,private toastr :ToastrService,private userservice:UserserviceService,private router:Router) { }
+  constructor(private route:ActivatedRoute,private authservice:AuthserviceService,private toastr :ToastrService,private userservice:UserserviceService,private router:Router) { }
   courseId:number;
   instituteId:number;
   userId:number;
   courseName:string;
-  newStudent:Students=new Students();
-  newAdmission:Admission=new Admission();
+  newStudent:Student
+  newAdmission:Admission;
   submitstatus:Boolean = false;  
 
   ngOnInit(): void {

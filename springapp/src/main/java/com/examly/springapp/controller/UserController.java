@@ -14,7 +14,7 @@ import com.examly.springapp.model.StudentModel;
 import com.examly.springapp.service.StudentService;
 
 @RestController
-@CrossOrigin(origins = "https://8080-faeaaacbbdbadccabfcbbfdcfccabcfad.project.examly.io")
+@CrossOrigin(origins = "https://8080-accfbadcaadccabfcbbfdcfccabcfad.project.examly.io")
 public class UserController {
 
     @Autowired
@@ -43,7 +43,7 @@ public class UserController {
     @DeleteMapping("/user/deleteStudent/{studentId}")
     public Void deleteStudent(@PathVariable("studentId") Integer studentId) {
         return studentService.deleteStudent(studentId);
-    }c
+    }
 
     @Autowired
 	 public AdmissionService admissionService;

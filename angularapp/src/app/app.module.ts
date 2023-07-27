@@ -18,12 +18,14 @@ import { SearchPipe } from './pipe/search.pipe';
 import { StudentComponent } from './components/adminside/student/student.component';
 import { UserNavigationBar } from './components/userside/usernavbar/user-navigation-bar.component';
 import { AdminNavigationBar } from './components/adminside/adminnavbar/admin-navigation-bar.component';
-import {HttpClientModule} from  '@angular/common/http';
+import {HTTP_INTERCEPTORS, HttpClientModule} from  '@angular/common/http';
 import { AddComponent } from './components/adminside/courses/add/add.component';
 import { EditComponent } from './components/adminside/courses/edit/edit.component';
 import { SearchComponent } from './components/adminside/courses/search/search.component';
 import { AddstudentComponent } from './components/adminside/student/addstudent/addstudent.component';
+import { ToastrModule } from 'ngx-toastr';
 import { EditstudentComponent } from './components/adminside/student/editstudent/editstudent.component';
+import { JwtInterceptor } from './interceptor/jwt.interceptor';
 
 @NgModule({
   declarations: [
@@ -52,8 +54,15 @@ import { EditstudentComponent } from './components/adminside/student/editstudent
     ReactiveFormsModule,
     FormsModule,
     HttpClientModule,
+    ToastrModule.forRoot()
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: JwtInterceptor,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

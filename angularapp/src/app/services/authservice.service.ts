@@ -6,6 +6,8 @@ import { Login } from '../components/auth/login/login';
   providedIn: "root"
 })
 export class AuthserviceService {
+  userId: number;
+  
 
   constructor(private http: HttpClient) { }
 
@@ -28,5 +30,13 @@ export class AuthserviceService {
     } catch (error) {
       return false;
     }
+  }
+
+  getUserId(): number {
+    return this.userId;
+  }
+  
+  setUserId(userId: number): void {
+    this.userId = userId;
   }
 }

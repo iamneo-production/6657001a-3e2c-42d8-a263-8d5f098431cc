@@ -14,14 +14,5 @@ import org.springframework.web.bind.annotation.RequestBody;
 @CrossOrigin("*")
 public class AdmissionformController {
 
-    @Autowired
-     AdmissionformRepository enroll;
-
-    @PostMapping("/user/addadmission")
-    public String saveEnroll(@RequestBody AdmissionformModel admission){
-        enroll.save(admission);
-        return "Course Enrolled";
-        
-    }
     
 }
