@@ -41,13 +41,13 @@
           "
           id="studentgrid{{ i + 1 }}"
         >
-          <td>{{ student.id }}</td>
-          <td>{{ student.name }}</td>
-          <td>{{ student.enrolledCourse }}</td>
-          <td>{{ student.mobileNo }}</td>
+          <td>{{ student.studentId }}</td>
+          <td>{{ student.firstName }}</td>
+          <td>{{ student.courseName }}</td>
+          <td>{{ student.mobile }}</td>
           <td>
-            <i class="fas fa-edit edit-icon me-4 ms-2 text-primary" (click)="editStudent(student)"></i>
-            <i class="fas fa-trash delete-icon text-danger" (click)="deleteStudent(student)"></i>
+            <i class="fas fa-edit edit-icon me-4 ms-2 text-primary" (click)="editStudent(student.studentId)"></i>
+            <i class="fas fa-trash delete-icon text-danger" (click)="deleteStudent(student.studentId)"></i>
           </td>
         </tr>
         <p
