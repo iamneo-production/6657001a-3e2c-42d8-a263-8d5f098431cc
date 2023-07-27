@@ -1,0 +1,20 @@
+<user-navigation-bar></user-navigation-bar>
+<div class="container">
+    <div class="row">
+        <div class="card col">
+            <div class="card-body course"
+            *ngFor="let cs of admission;let i=index"
+              id="enrolledCourse">
+                <p>Course Name:  {{courses[i]}}</p>
+                <p>Joined Date:  {{cs.courseStartDate|date:"fullDate"}}</p>
+                <p>Course end Date:  {{cs.courseEndDate|date:"fullDate"}}</p>
+                <div *ngIf="cs.status!=''; else elseBlock">
+                   Status: {{cs.status|titlecase}}
+                </div>
+                <ng-template #elseBlock>
+                    Status:pending
+                </ng-template>
+                <button class="btn"type="button" (click)="gotoEditAdmission(cs.studentId)">profile</button>
+        </div>
+    </div>
+</div>

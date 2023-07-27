@@ -1,0 +1,30 @@
+.container{
+    padding-top: 70px;
+    padding-left: 200px;
+    padding-right: 200px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    height: 580px;
+}
+.forms{
+    background-color:whitesmoke;
+    display: grid;
+    grid-gap:70px;
+    grid-template-columns:auto auto;
+    font-size: 16.5px;
+    border:1px solid black;
+    border-radius: 20px;
+    padding-left:90px;
+    padding-right: 90px;
+    box-shadow: 10px 10px 10px rgb(98, 95, 93);
+}
+.btn1,.btn2{
+    background-color:rgb(176, 232, 232);
+    font-size: 15px;
+    padding-left:20px;
+    padding-right:20px;
+}
+.btn1:hover,.btn2:hover{
+    background-color:brown
+}

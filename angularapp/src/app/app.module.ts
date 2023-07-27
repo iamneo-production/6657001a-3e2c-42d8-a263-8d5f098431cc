@@ -11,7 +11,8 @@ import { UserHomePageComponent } from './components/userside/userhomepage/userho
 import { AdmissionformComponent } from './components/userside/admissionform/admissionform.component';
 import { SignupComponent } from './components/auth/signup/signup.component';
 import { LoginComponent } from './components/auth/login/login.component';
-import { EnrolledCourseComponent } from './components/userside/userhomepage/enrolled-course/enrolled-course.component';
+import { EnrolledCourseComponent } from './components/userside/enrolled-course/enrolled-course.component';
+import { ProfileComponent } from './components/userside/profile/profile.component';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { UsercourseComponent } from './components/userside/usercourse/usercourse.component';
 import { SearchPipe } from './pipe/search.pipe';
@@ -43,13 +44,17 @@ import { JwtInterceptor } from './interceptor/jwt.interceptor';
     SearchPipe,
     StudentComponent,
     UserNavigationBar, 
-    AdminNavigationBar, AddComponent, EditComponent, SearchComponent,
+    AdminNavigationBar, 
+    AddComponent, 
+    EditComponent, 
+    SearchComponent,
     AddstudentComponent,
-    EditstudentComponent
+    EditstudentComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,AddComponent, EditComponent, SearchComponent,
+    AppRoutingModule
     AdminNavigationBar,
     ReactiveFormsModule,
     FormsModule,

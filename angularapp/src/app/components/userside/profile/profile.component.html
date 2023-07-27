@@ -1,0 +1,74 @@
+<user-navigation-bar></user-navigation-bar>
+<div class="container">
+    <form #editAdmissionForm = "ngForm" class="forms">
+        <div class="forms1">
+          <h3><p>PERSONAL DETAILS</p></h3>
+          <label class="first">First Name: </label>
+          <input type="text" id="firstName" name="firstName"class="fn" size="10" placeholder="Enter your first name" [(ngModel)]="stu.firstName" name="first" #first="ngModel" [disabled]="!edited"><br>
+          <br>
+          
+          <label class="last">Last Name: </label>
+          <input type="text" id="lastName" class="ln r" placeholder="Enter your last name" [(ngModel)]="stu.lastName" name="last" #last="ngModel" [disabled]="!edited"><br>
+          <br>
+    
+          <label class="mafe">Gender: </label>
+          <select id="gender" name="gender" class="mf r" placeholder="Enter male or female" [(ngModel)]="stu.gender" name="gender" #gender="ngModel" [disabled]="!edited"><br>
+          <option value="male">MALE</option>
+          <option value="female">FEMALE</option>
+          </select>
+          <br><br>
+        
+          <label>Father Name: </label>
+          <input type="text" id="fatherName" class="fan r" placeholder="Enter your father name" [(ngModel)]="stu.fatherName" name="father" #father="ngModel" [disabled]="!edited"><br>
+          <br>
+        
+          <label>Mother Name: </label>
+          <input type="text" id="motherName" class="mn" placeholder="Enter your mother name" [(ngModel)]="stu.motherName" name="mother" #mother="ngModel" [disabled]="!edited"><br>
+          <br>
+        
+          <label>Email Id: </label>
+          <input type="text" id="emailId" class="email" placeholder="Enter email id" [(ngModel)]="stu.emailId" name="mail" #mail="ngModel" [disabled]="!edited"><br>
+          <br>
+        
+          <label>Age: </label>
+          <input type="number" id="age" class="ag" placeholder="Enter your age" [(ngModel)]="stu.age" name="age" #age="ngModel" [disabled]="!edited"><br>
+          <br>
+        
+          <label>Phone Number: </label>
+          <input type="number" id="mobile" class="sslc-hsc" placeholder="Enter phone number" [(ngModel)]="stu.phoneNumber1" name="mob" #mob="ngModel" [disabled]="!edited"><br>
+          <br>
+        
+          <label>Alternate number: </label>
+          <input type="number" id="altMobile" class="sslc-hsc" placeholder="Enter alternate number" [(ngModel)]="stu.phoneNumber2" name="altmob" #altmob="ngModel" [disabled]="!edited"><br>
+          <br>
+        </div>
+        <div class="forms2">
+          <h3><p>ADDRESS INFORMATION</p></h3>
+          <label>House No:</label>
+          <input type="text" id="houseNo" class="hn" [(ngModel)]="stu.houseNo" name="house" #house="ngModel" [disabled]="!edited"><br>
+          <br>
+    
+          <label>Street Name: </label>
+          <input type="text" id="streetName" class="sn" [(ngModel)]="stu.streetName" name="street" #street="ngModel" [disabled]="!edited">
+          <br><br>
+          
+          <label>Area Name: </label>
+          <input type="text" id="areaName" class="an" [(ngModel)]="stu.areaName" name="area" #area="ngModel" [disabled]="!edited">
+          <br><br>
+          
+          <label class="p">Pincode: </label>
+          <input type="number" id="pincode" class="pc" [(ngModel)]="stu.pincode" name="pin" #pin="ngModel" [disabled]="!edited">
+          <br><br>
+          
+          <label>State: </label>
+          <input type="text" id="state" class="s" [(ngModel)]="stu.state" name="state" #state="ngModel" [disabled]="!edited">
+          <br><br>
+          
+          <label class="na">Nationality: </label>
+          <input type="text" id="nationality" class="n" [(ngModel)]="stu.nationality" name="nation" #nation="ngModel" [disabled]="!edited">
+          <br><br><br><br>
+          <button class="btn1" (click)="edited=!edited">Edit</button>&nbsp;
+          <button class="btn2" [disabled]="!edited" (click)="updateStudent(studentId)">Submit</button>
+        </div>
+    </form>
+</div>
