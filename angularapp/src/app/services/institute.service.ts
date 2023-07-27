@@ -9,7 +9,7 @@ import { Institute } from '../components/adminside/institutes/institute';
 export class InstituteService {
 
   constructor(private http: HttpClient) { }
-  baseUrl: string = 'http://localhost:8080-/';
+  baseUrl: string = 'https://8080-accfbadcaadccabfcbbfdcfccabcfad.project.examly.io/';
 
   viewInstitutes(): Observable<Institute[]> {
     return this.http.get<Institute[]>(this.baseUrl + 'admin/institute');

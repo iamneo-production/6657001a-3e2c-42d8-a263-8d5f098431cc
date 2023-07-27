@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 export class AdminserviceService {
 
   constructor(private http: HttpClient) { }
-  baseUrl: string = "";
+  baseUrl: string = "https://8080-accfbadcaadccabfcbbfdcfccabcfad.project.examly.io/";
   public viewStudents(): Observable<Student[]>{
     return this.http.get<Student[]>(this.baseUrl+`admin/student`);
   }

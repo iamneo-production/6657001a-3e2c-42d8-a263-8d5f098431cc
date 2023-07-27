@@ -6,7 +6,7 @@ import { map } from 'rxjs/operators';
 })
 export class EnrolledCourseService {
   constructor(private http:HttpClient){}
-  api:string="";
+  api:string="https://8080-accfbadcaadccabfcbbfdcfccabcfad.project.examly.io/";
   view(){
     return this.http.get(this.api)
     .pipe(map(responseData=>{
