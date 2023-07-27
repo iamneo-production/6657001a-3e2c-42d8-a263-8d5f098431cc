@@ -8,7 +8,7 @@ import { Course } from '../components/userside/usercourse/course';
 })
 export class CourseService {
 
-  private baseURL = 'http://localhost:8080/courses';
+  private baseURL = 'https://8080-accfbadcaadccabfcbbfdcfccabcfad.project.examly.io/';
 
   constructor(private http:HttpClient) { }
   getCoursesList(): Observable<Course[]>{

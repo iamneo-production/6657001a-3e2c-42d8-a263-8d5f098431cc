@@ -11,7 +11,7 @@ import { Course } from '../components/userside/usercourse/course';
 })
 export class UserserviceService {
 
-  baseUrl: string;
+  baseUrl: string= "https://8080-accfbadcaadccabfcbbfdcfccabcfad.project.examly.io/";
 
   constructor(private http: HttpClient) { }
 

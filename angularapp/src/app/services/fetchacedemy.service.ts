@@ -4,7 +4,7 @@ import {HttpClient} from '@angular/common/http';
   providedIn: 'root'
 })
 export class FetchacedemyService {
-  url="https://4fa7fe26-1e68-4c5e-814b-b53ac8aaea28.mock.pstmn.io/getAcademy";
+  url="https://8080-accfbadcaadccabfcbbfdcfccabcfad.project.examly.io/getAcademy";
   constructor(private http:HttpClient) { }
   
   users()
