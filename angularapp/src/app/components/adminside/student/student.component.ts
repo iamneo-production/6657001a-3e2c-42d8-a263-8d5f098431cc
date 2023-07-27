@@ -1,7 +1,7 @@
+import { AdminserviceService } from 'src/app/services/adminservice.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Student } from './student';
-import { StudentService } from 'src/app/services/student.service';
 
 @Component({
   selector: 'app-student',
@@ -12,20 +12,20 @@ export class StudentComponent implements OnInit {
   students: Student[] = [];
   searchTerm: string = '';
 
-  constructor(private router: Router, private studentService: StudentService) { }
+  constructor(private router: Router, private studentService: AdminserviceService) { }
 
   ngOnInit() {
     this.fetchStudents();
   }
 
   fetchStudents() {
-    this.studentService.getStudents().subscribe((students) => {
-      this.students = students;
+    this.studentService.viewStudents().subscribe((data) => {
+      this.students = data;
     });
   }
 
-  editStudent(student: Student) {
-    this.router.navigate(['/admissionform', { student: student }]);
+  editStudent(studentId:number ) {
+    this.router.navigate(['/admissionform',studentId]);
   }
 
   addStudent() {
@@ -33,7 +33,7 @@ export class StudentComponent implements OnInit {
   }
 
   deleteStudent(student: Student) {
-    this.studentService.deleteStudent(student.id).subscribe(() => {
+    this.studentService.deleteStudent(student.studentId).subscribe(() => {
       this.fetchStudents();
     });
   }

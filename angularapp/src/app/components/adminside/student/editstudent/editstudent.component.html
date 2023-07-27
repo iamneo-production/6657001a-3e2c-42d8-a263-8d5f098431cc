@@ -1,0 +1,193 @@
+<div class="container d-flex justify-content-center align-items-center min-vh-100 mt-3 mb-3">
+    <div class="row" style="width: 1000px;">
+      <div class="col rounded-top">
+  <form [formGroup]="enrollForm" #myForm="ngForm">
+      <div class="row" >
+          <div class="col rounded-3 text-center p-3 mb-3 " style="background-color: black;">
+              <span class="fs-3" style="color: rgb(255, 215, 113);">Edit Student </span>
+          </div>
+      </div> 
+      <div class="row ">
+          <div class="col mb-3">
+              <label for="firstName" class="form-label">First Name</label>
+              <input [(ngModel)]="enroll.firstName" type="text" class="form-control" id="firstName" placeholder="enter your firstname"formControlName="firstName" required>
+          </div>
+          <div class="col mb-3">
+              <label for="lastName" class="form-label">Last Name</label>
+              <input [(ngModel)]="enroll.lastName" type="text" class="form-control" id="lastName"  placeholder="enter your Lastname"formControlName="lastName" required>
+          </div>
+      </div>
+      
+      
+      <div class="row">
+          <div class="col mb-3" >
+              <label for="age" class="form-label">Age</label>
+              <input [(ngModel)]="enroll.age" type="text" class="form-control" id="age" placeholder="enter your Age"formControlName="age" required>
+          </div>
+          <div class="col  mb-3">
+              <label for="gender" class="form-label">Gender</label>
+              <input [(ngModel)]="enroll.gender" type="text" class="form-control" id="gender" placeholder="enter your Gender" formControlName="gender" required>
+              </div>
+              
+          </div>
+          <div class="row">
+              <div class="col mb-3" >
+                  <label for="fatherName" class="form-label">Father Name</label>
+                  <input [(ngModel)]="enroll.fatherName" type="text" class="form-control" id="fatherName" placeholder="enter your Fathername" formControlName="fatherName" required>
+              </div>
+              <div class="col mb-3" >
+                  <label for="motherName" class="form-label">Mother Name</label>
+                  <input [(ngModel)]="enroll.motherName" type="text" class="form-control" id="motherName" placeholder="enter your Mothername" formControlName="motherName"required>
+              </div>
+              
+              </div>
+  
+              <div class="row">
+                  <div class="col mb-3" >
+                      <label for="phoneNumber1" class="form-label">PhoneNumber1</label>
+                      <input [(ngModel)]="enroll.phoneNumber1" type="tel" class="form-control" id="phoneNumber1" placeholder="enter your Phonenumber" formControlName="phoneNumber1"
+                      [ngClass]="{
+                          'is-invalid':
+                            enrollForm.controls['phoneNumber1'].errors &&
+                            enrollForm.controls['phoneNumber1'].dirty &&
+                              enrollForm.controls['phoneNumber1'].touched
+                        }"  required >
+                        <div
+                *ngIf="
+                  enrollForm.controls['phoneNumber1'].dirty &&
+                  enrollForm.controls['phoneNumber1'].touched &&
+                  enrollForm.hasError('required', 'phoneNumber1')
+                "
+                class="text-danger"
+              >
+                phoneNumber is required
+                        
+                  </div>
+                  <div
+                *ngIf="
+                  enrollForm.controls['phoneNumber1'].dirty &&
+                  enrollForm.controls['phoneNumber1'].touched &&
+                  enrollForm.hasError('minlength', 'phoneNumber1')
+                "
+                class="text-danger"
+              >
+                minlength should be 10 characters
+              </div>
+            </div>
+                  <div class="col mb-3" >
+                      <label for="phoneNumber2" class="form-label">PhoneNumber2</label>
+                      <input [(ngModel)]="enroll.phoneNumber2" type="tel" class="form-control" id="phoneNumber2" placeholder="enter your Alternatenumber" formControlName="phoneNumber2"
+                      [ngClass]="{
+                          'is-invalid':
+                            enrollForm.controls['phoneNumber2'].errors &&
+                            enrollForm.controls['phoneNumber2'].dirty &&
+                              enrollForm.controls['phoneNumber2'].touched
+                        }"  required>
+                        <div
+                *ngIf="
+                  enrollForm.controls['phoneNumber2'].dirty &&
+                  enrollForm.controls['phoneNumber2'].touched &&
+                  enrollForm.hasError('required', 'phoneNumber2')
+                "
+                class="text-danger"
+              >
+                phoneNumber is required
+                        
+                  </div>
+                  <div
+                *ngIf="
+                  enrollForm.controls['phoneNumber2'].dirty &&
+                  enrollForm.controls['phoneNumber2'].touched &&
+                  enrollForm.hasError('minlength', 'phoneNumber2')
+                "
+                class="text-danger"
+              >
+                minlength should be 10 characters
+              </div>
+            </div>
+                  </div>
+              
+                  
+                  <div class="row">
+                      <div class="col mb-3" >
+                          <label for="emailId" class="form-label">Email Id</label>
+                          <input [(ngModel)]="enroll.emailId" type="email" class="form-control" id="emailId" placeholder="enter your EmailId" formControlName="emailId"
+                          [ngClass]="{
+                              'is-invalid':
+                                enrollForm.controls['emailId'].errors &&
+                                enrollForm.controls['emailId'].dirty &&
+                                  enrollForm.controls['emailId'].touched
+                            }" required>
+                            <div
+                *ngIf="
+                  enrollForm.controls['emailId'].dirty &&
+                  enrollForm.controls['emailId'].touched &&
+                  enrollForm.hasError('required', 'emailId')
+                "
+                class="text-danger"
+              >
+                email is required
+              </div>
+              <div
+                *ngIf="
+                  enrollForm.controls['emailId'].dirty &&
+                  enrollForm.controls['emailId'].touched &&
+                  enrollForm.hasError('emailId', 'emailId')
+                "
+                class="text-danger"
+              >
+                email format is not valid
+              </div>
+            </div>
+                          <div class="form-text"></div>
+                      
+                      </div>
+                      
+                      <div class="row">
+                          <div class="col mb-2">Adress Information :</div>
+                      </div>
+                      <div class="row">
+                          <div class="col mb-3">
+                              <label for="houseNo" class="form-label">House No:</label>
+                      <input [(ngModel)]="enroll.houseNo" type="text" class="form-control" id="houseNo" placeholder="enter your Houseno"formControlName="houseNo" required>
+                          </div>
+                          <div class="col mb-3">
+                              <label for="streetName" class="form-label">Street Name:</label>
+                             <input [(ngModel)]="enroll.streetName" type="text" class="form-control" id="streetName" placeholder="enter your Streetname" formControlName="streetName" required>
+                          </div>
+                      </div>
+                      <div class="row">
+                          <div class="col mb-3">
+                              <label for="areaName" class="form-label">Area Name:</label>
+                      <input [(ngModel)]="enroll.areaName" type="text" class="form-control" id="areaName" placeholder="enter your Areaname" formControlName="areaName"required>
+                          </div>
+                          <div class="col mb-3">
+                              <label for="pincode" class="form-label">Pincode:</label>
+                             <input [(ngModel)]="enroll.pincode" type="text" class="form-control" id="pincode" placeholder="enter your Pincode" formControlName="pincode" required>
+                          </div>
+                      </div>
+                      <div class="row">
+                          <div class="col mb-3">
+                              <label for="state" class="form-label">State:</label>
+                      <input [(ngModel)]="enroll.state" type="text" class="form-control" id="state" placeholder="enter your state" formControlName="state"required>
+                          </div>
+                          <div class="col mb-3">
+                              <label for="nationality" class="form-label">Nationality:</label>
+                             <input [(ngModel)]="enroll.nationality" type="text" class="form-control" id="nationality" placeholder="enter your Nationality" formControlName="nationality" required>
+                          </div>
+                      </div>
+                      <div class="row ">
+                          <div class="col-4 rounded-3 offset-4">
+                              <div class="d-grid">
+                                <button type="submit" 
+                                [disabled]="myForm.form.invalid"
+                                id="enrollNowButton" class="btn btn-success" (click)="submit()" [disabled]="enrollForm.invalid && !submitstatus">Enroll now</button>
+                              </div>
+                          </div>
+                      </div>
+  
+          
+  </form>
+  </div>
+  </div>
+  </div>
