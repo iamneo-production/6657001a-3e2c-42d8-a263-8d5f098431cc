@@ -21,7 +21,7 @@ import com.examly.springapp.service.UserService;
 import com.examly.springapp.entity.UserEntity;
 
 @RestController
-@CrossOrigin(origins = "https://8080-accfbadcaadccabfcbbfdcfccabcfad.project.examly.io")
+@CrossOrigin(origins = "https://8081-accfbadcaadccabfcbbfdcfccabcfad.project.examly.io")
 public class AuthController {
     @Autowired
     private UserService userService;
@@ -63,16 +63,4 @@ public class AuthController {
         return ResponseEntity.ok(new AuthResponse(user.getUserRole(), token));
     }
 
-    @GetMapping("/user/hello")
-    @PreAuthorize("hasRole('USER')")
-    public String helloUser(){
-        return "hello user";
-    }
-
-    
-    @GetMapping("/admin/hello")
-    @PreAuthorize("hasRole('ADMIN')")
-    public String helloAdmin(){
-        return "hello admin";
-    }
 }
