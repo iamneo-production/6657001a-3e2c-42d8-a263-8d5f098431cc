@@ -1,1 +1,24 @@
-<p>courses works!</p>
+<admin-navigation-bar></admin-navigation-bar>
+<div class="container mb-3 mt-3" id="searchCourse">
+  <input type="text" class="sr" placeholder="Type here to search course" [(ngModel)]="searchCourse">                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <button class="add" (click)="gotoaddcourse()">Add Course</button>
+</div> <br><br>
+<div class="course-container">
+  <ng-container *ngFor="let course of courses">
+      <div class="course-item">
+        <div *ngIf="searchCourse === '' || course.name.toLowerCase().includes(searchCourse)">
+          <div class="userCourseGrid1">
+            <div class="courseName">{{ course.name }}</div>
+            <div class="courseDuration">Duration of the Course : {{ course.duration }}</div>
+            <div class="courseTime">Course availabe Timing : {{ course.time }}</div>
+            <div class="courseStudents">Number of Students : {{ course.students }}</div>
+            <div class="courseDescription">course Description : {{ course.description }}</div>
+            <div class="button">
+                <button class="btn" (click)="goteditcourse(course.courseId)" id="editCourse"><mat-icon>edit</mat-icon></button>&nbsp;&nbsp;&nbsp;&nbsp;
+                <button class="btn" (click)="delete(course.courseId)" id="deleteCourse"><mat-icon>delete_outline</mat-icon></button>
+            </div>
+          </div>
+        </div>
+      </div>
+  </ng-container>
+</div>

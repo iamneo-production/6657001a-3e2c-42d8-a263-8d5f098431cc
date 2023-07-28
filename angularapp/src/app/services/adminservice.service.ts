@@ -36,5 +36,31 @@ export class AdminserviceService {
   public getStudentById(studentId : number): Observable<Student>{
     return this.http.get<Student>(this.baseUrl+'admin/student/'+studentId);
   }
+  //get the list of courses in institutes
+  public viewCoursesFromInstitute(instituteId : number): Observable<Course[]>{
+    return this.http.get<Course[]>(this.baseUrl+`admin/findByInstituteId/`+instituteId);
+  }
+
+   //add the courses to the specified institute
+  public addCourse(newcourse:Course): Observable<any>{
+    return this.http.post<Institute>(this.baseUrl+`admin/addCourse`,newcourse);
+  }
+
+  //delete the course by courseId
+  public deleteCourse(courseId : number): Observable<String>{
+    const requestOptions: Object = {
+      responseType: 'text'
+    }
+    return this.http.delete<String>(this.baseUrl+`admin/deleteCourse/`+courseId,requestOptions);
+  }
+  
+  //update the Course by CourseId and Course details
+  public editCourse(courseId:number, updatedCourse:Course): Observable<Course>{
+    return this.http.put<Course>(this.baseUrl+`admin/editCourse/`+courseId,updatedCourse);
+  }
+  //get the course by courseId
+  public getCourseById(courseId : number): Observable<Course>{
+    return this.http.get<Course>(this.baseUrl+`admin/courses/`+courseId);
+  }
 
 }

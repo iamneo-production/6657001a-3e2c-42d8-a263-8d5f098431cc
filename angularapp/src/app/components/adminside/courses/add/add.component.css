@@ -1,53 +1,35 @@
-.design1{
-    margin: 10% 0px ;
-    width: 50%;
-    margin-left: 50px;
-    text-align: center;
-    padding: 30px 30px;
-    font-size: 25px;
-}
-
-.design2{
-    margin-top: 10%;
-    width: 50%;
-    margin-left: 50px;
-    text-align: center;
-    padding: 30px 30px;
-    font-size: 25px;
-
-}
-
-.design3{
-    margin-top: 20%;
-    width: 50%;
-    margin-left: 50px;
-    text-align: center;
-    padding: 30px 30px;
-    font-size: 25px;
-}
-
-.design4{
-    margin: 10% 0px ;
-    width: 50%;
-    margin-left: 50px;
-    text-align: center;
-    padding: 30px 30px;
-    font-size: 18px;
-}
-
-.design5{
-    margin: 26% 0px ;
-    width: 50%;
-    margin-left: 50px;
-    text-align: center;
-    padding: 30px 30px;
+.inp1,.inp2,.inp3,.inp4{
+    border-radius: 20px;
     font-size: 20px;
-    
+    height: 70px;
+    width: 430px;
+    text-align:center;
 }
+.inp5{
+    border-radius: 20px;
+    font-size: 20px;
+    height: 100px;
+    width: 430px;
+    text-align:center;
 
-.button1{
-    position: relative;
-    left: 50%;
-    bottom: 23%;
-    
+}
+.container-fluid{
+    display: grid;
+    grid-template-columns: auto auto;
+    padding-top: 100px;
+    border: 1px solid;
+    border-radius:20px;
+    background-color: rgb(196, 197, 204);
+    padding: 30px;
+}
+.con{
+    padding-top:80px;
+    padding-left: 150px;
+    padding-right: 150px;
+}
+.btn{
+    border-radius: 20px;
+    font-size: 20px;
+    float:center;
+    background-color:blue;
 }

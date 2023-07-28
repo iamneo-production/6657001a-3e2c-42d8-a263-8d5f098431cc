@@ -1,0 +1,104 @@
+#searchCourse{
+    width:500px;
+    border-radius: 20px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    padding: 20px;
+    margin: auto;
+  }
+  #searchCourse > i{
+    font-size: 20px;
+    color: rgb(29, 60, 128);
+  
+  }
+  .container{
+    padding-top: 170px;
+  }
+  #searchCourse > input{
+    
+    height: 40px;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    background-color: #dddddd;
+    color: rgb(0, 0, 0);
+    padding-left: 50px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }
+  .course-container{
+    padding-top:20px;
+  }
+  .search{
+    justify-content: center;
+  }
+  .sr{
+    border-radius:20px;
+    justify-content: center;
+    align-items:center;
+  }
+  .button{
+    float:right;
+  }
+    .course-item {
+      width: 800px;
+      margin: auto;
+      transition: transform 0.3s ease;
+      padding-bottom:10px;
+    }
+    
+    .course-item:hover {
+      transform: scale(1.03);
+    }
+    .add{
+      border-radius:20px;
+      font-size: 15px;
+    }
+    .userCourseGrid1 {
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 20px;
+      height: 260px;
+      align-items: center;
+      background-color: #dddddd;
+    }
+    
+    .courseName {
+      font-weight: bold;
+      font-size: larger;
+      color: #265191;
+    }
+    
+    .courseDuration,
+    .courseTime,
+    .courseStudents,
+    .courseDescription{
+      margin-top: 5px;
+      color: #413f3f;
+    }
+    
+    .courseDescription {
+      margin-top: 10px;
+    }
+    
+    .button {
+      margin-top: 10px;
+    }
+    .btn {
+      border-radius:10px;
+    }
+    
+    .btn-enrol {
+      background-color: #265191;
+    }
+    .route{
+      text-decoration: none;
+      color: #eeeeee;
+    }
+    .btn-enrol:hover {
+      background-color: #45a049;
+    }
+    
+    
+    
