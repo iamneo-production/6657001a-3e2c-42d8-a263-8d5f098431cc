@@ -53,9 +53,10 @@ export class AdmissionformComponent implements OnInit {
     streetName: new FormControl('',[Validators.required]),
     areaName: new FormControl('',[Validators.required]),
     pincode: new FormControl('',[Validators.required]),
-    nationality: new FormControl('',[Validators.required]),
     state: new FormControl('',[Validators.required]),
+    nationality: new FormControl('',[Validators.required]),
     courseName: new FormControl('',),
+    userId: new FormControl('',)
 })
 
   loginUser()
@@ -66,6 +67,29 @@ export class AdmissionformComponent implements OnInit {
   get firstName()
   {
     return this.enrollForm.get('firstName')
+  }
+
+  get lastName()
+  {
+    return this.enrollForm.get('lastName')
+  }
+  get age()
+  {
+    return this.enrollForm.get('age')
+  }
+  get gender()
+  {
+    return this.enrollForm.get('gender')
+  }
+  get phoneNumber1()
+  {
+    return this.enrollForm.get('phoneNumber1')
+  }
+
+
+  get phoneNumber2()
+  {
+    return this.enrollForm.get('phoneNumber2')
   }
 
   get fatherName()
@@ -82,36 +106,7 @@ export class AdmissionformComponent implements OnInit {
   {
     return this.enrollForm.get('emailId')
   }
-
-  get age()
-  {
-    return this.enrollForm.get('age')
-  }
-
-  get sslc()
-  {
-    return this.enrollForm.get('sslc')
-  }
-
-  get lastName()
-  {
-    return this.enrollForm.get('lastName')
-  }
-
-  get mobile()
-  {
-    return this.enrollForm.get('mobile')
-  }
-
-  get gender()
-  {
-    return this.enrollForm.get('gender')
-  }
-
-  get altMobile()
-  {
-    return this.enrollForm.get('altMobile')
-  }
+ 
 
   get houseNo()
   {
