@@ -42,10 +42,10 @@ export class LoginComponent implements OnInit {
       localStorage.setItem("token", jwttoken);
       localStorage.setItem("role", role);
 
-      if (role === "userDetailsadmin") {
-        this.router.navigate(['/adminAcademy']);
+      if (role === "ADMIN") {
+        this.router.navigate(['/admin']);
       } else {
-        this.router.navigate(['/viewAcademy']);
+        this.router.navigate(['/user']);
       }
     }, (error: any) => {
       console.log(error)
