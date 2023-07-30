@@ -11,7 +11,11 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.examly.springapp.model.StudentModel;
+import com.examly.springapp.model.AdmissionModel;
 import com.examly.springapp.service.StudentService;
+import com.examly.springapp.service.AdmissionService;
+
+import java.util.List;
 
 @RestController
 @CrossOrigin(origins = "https://8080-accfbadcaadccabfcbbfdcfccabcfad.project.examly.io")

@@ -11,9 +11,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.usercourse.model.Course;
-import com.example.usercourse.repository.CourseRepository;
-import com.example.usercourse.service.CourseService;
+import com.examly.springapp.model.CourseModel;
+import com.examly.springapp.repository.CourseRepository;
+import com.examly.springapp.service.CourseService;
 
 @CrossOrigin("*")
 @RestController
@@ -25,7 +25,7 @@ public class CourseController {
 	
 	
 	@GetMapping
-	public List<Course> getAllCourses(){
+	public List<CourseModel> getAllCourses(){
 		return courseService.getAllCourses();   
 	}
 	
