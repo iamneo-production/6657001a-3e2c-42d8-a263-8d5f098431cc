@@ -8,15 +8,15 @@ import { Router } from '@angular/router';
 })
 export class AdminNavigationBar implements AfterViewInit {
   links = [
-    { name: 'Academy', route: '/academy', id: 'Academy' },
+    { name: 'Academy', route: '/admin/institute', id: 'Academy' },
     {
       name: 'Course',
-      route: '/course',
+      route: '/admin/course/',
       id: 'Course',
     },
     {
       name: 'Students',
-      route: '/students',
+      route: '/admin/students',
       id: 'Students',
     },
   ];
