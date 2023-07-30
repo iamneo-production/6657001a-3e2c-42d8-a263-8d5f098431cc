@@ -11,7 +11,7 @@ export class UserNavigationBar implements AfterViewInit {
     { name: 'Academy', route: '/user/institute', id: 'Academy' },
     {
       name: 'Enrolled Course',
-      route: 'user/enrolledcourse',
+      route: '/user/enrolledcourse',
       id: 'EnrolledCourse',
     },
   ];
