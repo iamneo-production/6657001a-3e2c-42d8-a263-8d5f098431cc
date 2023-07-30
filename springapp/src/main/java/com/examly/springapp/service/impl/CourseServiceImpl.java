@@ -5,8 +5,9 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.example.usercourse.model.Course;
-import com.example.usercourse.repository.CourseRepository;
+import com.examly.springapp.model.CourseModel;
+import com.examly.springapp.repository.CourseRepository;
+import com.examly.springapp.service.CourseService;
 
 @Service
 public class CourseServiceImpl implements CourseService{
@@ -14,12 +15,12 @@ public class CourseServiceImpl implements CourseService{
 	private CourseRepository courseRepositiory;
 	
 	@Override
-	public Course storeCourseDetails(Course course) {
+	public CourseModel storeCourseDetails(CourseModel course) {
 		return courseRepositiory.save(course);
 	}
 	
 	@Override
-	public List<Course> getAllCourses() {
+	public List<CourseModel> getAllCourses() {
 		return courseRepositiory.findAll();
 	}
 

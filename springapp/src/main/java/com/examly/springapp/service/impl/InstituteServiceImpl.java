@@ -6,9 +6,9 @@ import java.util.Objects;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.examly.springapp.Model.InstituteModel;
+import com.examly.springapp.model.InstituteModel;
 import com.examly.springapp.Repository.InstituteRepository;
-import com.examly.springapp.Exception.ResourceNotFoundException;
+import com.examly.springapp.exception.ResourceNotFoundexception;
 
 @Service
 public class InstituteServiceImpl implements InstituteService{
@@ -47,12 +47,12 @@ public class InstituteServiceImpl implements InstituteService{
 
         if(Objects.nonNull(institute.getMobile()) &&
         !"".equalsIgnoreCase(institute.getMobile())) {
-            inm.setInstituteMobileNo(institute.getMobile());
+            inm.setMobile(institute.getMobile());
         }
 
         if(Objects.nonNull(institute.getEmail()) &&
         !"".equalsIgnoreCase(institute.getEmail())) {
-            inm.setInstituteEmail(institute.getEmail());
+            inm.setEmail(institute.getEmail());
         }
 
         if(Objects.nonNull(institute.getInstituteImgUrl())&&
@@ -73,7 +73,7 @@ public class InstituteServiceImpl implements InstituteService{
     public InstituteModel getInstituteById(Integer instituteId) {
 
         return adminInstituteRepository.findById(instituteId).orElseThrow(() -> 
-                                    new ResourceNotFoundException("Institute not existed for id:"+ instituteId));
+                                    new ResourceNotFoundexception("Institute not existed for id:"+ instituteId));
     }
     
 }

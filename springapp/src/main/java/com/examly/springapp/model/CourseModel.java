@@ -1,14 +1,16 @@
 package com.examly.springapp.model;
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
 
 @Entity
 @Table(name = "courses")
-public class Course {
+public class CourseModel {
 	
 	  @Id
 	  @GeneratedValue(strategy=GenerationType.IDENTITY)
@@ -29,11 +31,11 @@ public class Course {
 	  @Column(name="course_students")
       private int courseStudents;
 	  
-      public Course() {
+      public CourseModel() {
     	  
       }
 	
-	public Course(String courseName, String courseDescription, int courseDuration, String courseTiming,
+	public CourseModel(String courseName, String courseDescription, int courseDuration, String courseTiming,
 			int courseStudents) {
 		super();
 		this.courseName = courseName;
