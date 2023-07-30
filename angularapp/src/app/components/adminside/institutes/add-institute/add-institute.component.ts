@@ -11,7 +11,7 @@ import { Institute } from '../institute';
   styleUrls: ['./add-institute.component.css']
 })
 export class AddInstituteComponent implements OnInit {
-  
+ 
   constructor(private router:Router, private institute:InstituteService, private toastr :ToastrService) { }
   newinstitute : Institute = new Institute();
   ngOnInit(): void {

@@ -12,7 +12,7 @@ import { Institute } from '../institute';
   styleUrls: ['./edit-institute.component.css']
 })
 export class EditInstituteComponent implements OnInit {
- 
+   
   
   constructor(private router:Router,private institute:InstituteService,private route:ActivatedRoute, private toastr :ToastrService) { }
 
