@@ -8,10 +8,10 @@ import { Router } from '@angular/router';
 })
 export class UserNavigationBar implements AfterViewInit {
   links = [
-    { name: 'Academy', route: '/academy', id: 'Academy' },
+    { name: 'Academy', route: '/user/institute', id: 'Academy' },
     {
       name: 'Enrolled Course',
-      route: '/enrolled-course',
+      route: '/user/enrolledcourse',
       id: 'EnrolledCourse',
     },
   ];

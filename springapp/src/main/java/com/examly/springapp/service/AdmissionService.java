@@ -3,6 +3,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.examly.springapp.model.AdmissionModel;
 import com.examly.springapp.repository.AdmissionRepository;
+import com.examly.springapp.exception.ResourceNotFoundexception;
+import java.util.List;
 @Service
 public class AdmissionService {
     @Autowired
@@ -54,14 +56,14 @@ public class AdmissionService {
     public String getStatusValue(int id)
     {
        AdmissionModel admission=admissionRepo.findById(id)
-   		   .orElseThrow(()->new ResourceNotFoundException("Admission Id "+ id+"not existed"));
+   		   .orElseThrow(() ->new ResourceNotFoundexception("Admission Id "+ id+"not existed"));
       return admission.getStatus();
     }
 
     public AdmissionModel getDetailsById(int id)
     {
          AdmissionModel admission=admissionRepo.findById(id)
-            .orElseThrow(()->new ResourceNotFoundException("Admission Id "+ id+"not existed"));
+            .orElseThrow(()->new ResourceNotFoundexception("Admission Id "+ id+"not existed"));
          return admission;
     }
 

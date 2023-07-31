@@ -2,7 +2,7 @@ package com.examly.springapp.Service;
 
 import java.util.List;
 
-import com.examly.springapp.Model.InstituteModel;
+import com.examly.springapp.model.InstituteModel;
 
 public interface InstituteService {
 

@@ -60,34 +60,34 @@ public class AdminController {
 
     @PostMapping("/admin/addAdmission")
     public AdmissionModel addAdmission(@RequestBody AdmissionModel admissionModel) {
-        return admissionService.saveAdmission(admissionModel);
+        return admissionService.saveDetail(admissionModel);
     }
 
     @GetMapping("/admin/viewAdmission")
     public List<AdmissionModel> viewAdmission() {
-        return admissionService.viewAdmission();
+        return admissionService.getDetails();
     }
     
     @PutMapping("/admin/editAdmission/{admissionId}")
     public AdmissionModel editAdmission(@PathVariable("admissionId") Integer admissionId,
             @RequestBody AdmissionModel admissionModel) {
-        return admissionService.editAdmission(admissionId, admissionModel);
+        return admissionService.updateDetails(admissionId, admissionModel);
     }
 
     @DeleteMapping("/admin/deleteAdmission/{admissionId}")
     public Void deleteAdmission(@PathVariable("admissionId") Integer admissionId) {
-        admissionService.deleteAdmission(admissionId);
+        admissionService.deleteDetails(admissionId);
         return null;
     }
 
     @GetMapping("/admin/viewStatus/{admissionId}")
     public String viewstatus(@PathVariable("admissionId") Integer admissionId){
-        return admissionService.getAdmissionStatus(admissionId);
+        return admissionService.getStatusValue(admissionId);
     }
 
     @GetMapping("/admin/getAdmissionByStudentId/{studentId}")
-    public List<AdmissionModel> getAdmissionByUserId(@PathVariable("studentId") Integer studentId){
-        return admissionService.getAdmissionByStudentId(studentId);
+    public AdmissionModel getAdmissionByUserId(@PathVariable("studentId") Integer studentId){
+        return admissionService.findByStudentId(studentId);
     }
 
 
